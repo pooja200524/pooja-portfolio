@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooja | Portfolio</title>
+
+  <style>
+    :root {
+      --background: #0f172a;
+      --surface: #182235;
+      --text: #f8fafc;
+      --muted: #b8c2d1;
+      --accent: #a78bfa;
+      --accent-light: #c4b5fd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo {
+      color: var(--accent-light);
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent-light);
+    }
+
+    section {
+      padding: 80px 8%;
+      scroll-margin-top: 72px;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 30%, rgba(124, 58, 237, 0.2), transparent 35%);
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      color: var(--accent-light);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.1;
+    }
+
+    h1 span,
+    h2 span {
+      color: var(--accent-light);
+    }
+
+    .hero p,
+    .about p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 12px 22px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #171329;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: 2.2rem;
+    }
+
+    .about-card,
+    .skill-card,
+    .contact-card {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      background: var(--surface);
+    }
+
+    .about-card {
+      max-width: 800px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .skill-card {
+      color: var(--accent-light);
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .contact-card {
+      max-width: 620px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+    }
+
+    .contact-card a {
+      color: var(--accent-light);
+      font-weight: bold;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 22px 8%;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="#home">Pooja</a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">Welcome to my portfolio</p>
+        <h1>Hi, I'm <span>Pooja</span></h1>
+        <p>
+          MCA student, technology enthusiast, and aspiring web designer.
+          I enjoy learning new things and creating thoughtful digital experiences.
+        </p>
+        <a class="button" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About <span>Me</span></h2>
+      <div class="about-card">
+        <p>
+          I’m currently pursuing my Master of Computer Applications (MCA).
+          I’m passionate about technology and designing, and I’m building my
+          skills in programming and web development. I love exploring creative
+          ideas and turning them into useful, attractive experiences.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>My <span>Skills</span></h2>
+      <p class="about">Here are some of the technologies I’m learning and working with:</p>
+      <div class="skills-grid">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact <span>Me</span></h2>
+      <div class="contact-card">
+        <p>Have a question or want to connect? Send me an email:</p>
+        <p><a href="mailto:pooja441k@gmail.com">pooja441k@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Pooja. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
